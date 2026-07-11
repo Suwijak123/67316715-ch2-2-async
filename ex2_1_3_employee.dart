@@ -31,16 +31,14 @@ class PartTimeEmployee extends Employee {
 }
 
 void main() {
-  // 4. เก็บพนักงานทั้งหมดลงใน List<Employee> เพื่อแสดงพลังของ Polymorphism
   List<Employee> employees = [
     FullTimeEmployee("สมชาย (ประจำ)", 30000.0),
-    PartTimeEmployee("สมหญิง (พาร์ทไทม์)", 150.0, 80), // 150 บาท * 80 ชั่วโมง
+    PartTimeEmployee("สมหญิง (พาร์ทไทม์)", 150.0, 80),
     FullTimeEmployee("สมศักดิ์ (ประจำ)", 25000.0),
   ];
 
-  print("=== รายงานเงินเดือนพนักงาน ===");
+  print("รายงานเงินเดือนพนักงาน");
   
-  // 5. วนลูปแสดงเงินเดือนผ่านเมธอดร่วม
   for (var emp in employees) {
     print("พนักงาน: ${emp.name} | เงินเดือนที่ได้รับ: ${emp.calculateSalary()} บาท");
   }
